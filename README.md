@@ -8,9 +8,9 @@ I wanted to ease the web app development and [Streamlit](https://www.streamlit.i
 
 TODO: edit the links
 
-All the data preprocessing steps are conducted using a Jupyter Notebook and is available [here](https://github.com/memoatwit/dsexample/blob/master/Insurance%20-%20Model%20Training%20Notebook.ipynb).
+the data preprocessing steps are conducted using a Jupyter Notebook and is available [here](https://github.com/vod6atwit/predict_price_used_Toyota/blob/master/preprocessing.ipynb)
 
-All the models training, building, testing, and selecting are conducted using a Jupyter Notebook and is available [here](https://github.com/memoatwit/dsexample/blob/master/Insurance%20-%20Model%20Training%20Notebook.ipynb).
+All the models training, building, testing, and selecting are conducted using a Jupyter Notebook and is available [here](https://github.com/vod6atwit/predict_price_used_Toyota/blob/master/Models/regression%20models.ipynb)
 
 The data has over 6500 samples with 8 independent/feature variables: model, year, transmission, mileage, fuelType, tax, mpg, and engineSize with 1 dependent variable: Price
 The objective is to indicate the price to sell used Toyota cars.
@@ -18,9 +18,10 @@ The dataset can found online at [kaggle](https://www.kaggle.com/datasets/aishwar
 
 TODO: edit after finishing the code
 
-Data preview:
+data overview:
 ![data overview screenshot](./img/data_overview_01.png)
 
+data info:
 ![data info screenshot](./img/data_overview_02.png)
 
 Note that data has categorical features in 3 cols: model, transmission, and fuelType.
@@ -70,16 +71,27 @@ I am not adding any visualizations to this example, though st supports it. Coupl
 
 Experimenting with various models implemented by different regression algorithms and the data was split 80/20 for testing, I found that Random Forest regression with specific number of trees provided one of the highest accuracies. I applied multiple way to evaluate the model performance such as r2_score, max_error, mean_absolute_error (MAE), and mean_squared_error (MSE). Across all these evaluations, the results for the random forest regression model were the best of all model
 
+### Multiple Linear Regression results
+
 ![Multiple Linear Regression results](./img/Multiple_Linear_Regression_results.png)
+
+### Support Vector Regression results
+
 ![Support Vector Regression results](./img/Support_Vector_Regression_results.png)
+
+### Decision Tree Regression results
+
 ![Decision Tree Regression results](./img/Decision_Tree_Regression_results.png)
+
+### Random Forest Regression results
+
 ![Random Forest Regression results](./img/Random_forest_regression_results.png)
 
 Thus, I decided the deploy the pipelined Random Forest regression model.
 
 Some of the benefits of Random Forest Regression that I've found underline the acceptable level of success for this dataset
 
-![Why Random Forest is My Favorite Machine Learning Model](https://towardsdatascience.com/why-random-forest-is-my-favorite-machine-learning-model-b97651fa3706)
+[Why Random Forest is My Favorite Machine Learning Model](https://towardsdatascience.com/why-random-forest-is-my-favorite-machine-learning-model-b97651fa3706)
 
 TODO: edit this line
 
