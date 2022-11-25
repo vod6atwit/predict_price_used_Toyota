@@ -6,70 +6,87 @@ I wanted to ease the web app development and [Streamlit](https://www.streamlit.i
 
 ## Selection of Data
 
-TODO: edit the links
-
-the data preprocessing steps are conducted using a Jupyter Notebook and is available [here](https://github.com/vod6atwit/predict_price_used_Toyota/blob/master/preprocessing.ipynb)
+The data preprocessing steps are conducted using a Jupyter Notebook and is available [here](https://github.com/vod6atwit/predict_price_used_Toyota/blob/master/preprocessing.ipynb)
 
 All the models training, building, testing, and selecting are conducted using a Jupyter Notebook and is available [here](https://github.com/vod6atwit/predict_price_used_Toyota/blob/master/Models/regression%20models.ipynb)
 
 The data has over 6500 samples with 8 independent/feature variables: model, year, transmission, mileage, fuelType, tax, mpg, and engineSize with 1 dependent variable: Price
+
 The objective is to indicate the price to sell used Toyota cars.
+
 The dataset can found online at [kaggle](https://www.kaggle.com/datasets/aishwaryamuthukumar/cars-dataset-audi-bmw-ford-hyundai-skoda-vw)[2].
 
-TODO: edit after finishing the code
+#### Data overview:
 
-data overview:
 ![data overview screenshot](./img/data_overview_01.png)
 
-data info:
+#### Data info:
+
 ![data info screenshot](./img/data_overview_02.png)
 
 Note that data has categorical features in 3 cols: model, transmission, and fuelType.
 
 I used OneHotEncoder/ColumnTransformer on these features and kept the rest of the features as is. When using a Random Forest Regression model, the r2_score always over 95%.
 
-We then create a pipeline for automating the process for new data. I also experimented with different imputer strategies for missing data and added second-degree polynomial features for both the numeric and categorical data. The shown values are obtained by performing a grid search over these arguments.
-Pipeline preview:
-![pipeline screenshot](./pipeline.png)
-
 I finally saved the model via joblib to be used for predictions by the web app.
 
 ## Methods
 
-Tools:
+### Tools:
 
 - NumPy, SciPy, Pandas, and Scikit-learn for data analysis and inference
 - Streamlit (st) for web app design
 - GitHub and Heroku for web app deployment and hosting/version control
 - VS Code as IDE
 
-Inference methods used with Scikit:
+### Inference methods used with Scikit:
 
-- modules: metrics, compose, preprocessing, model_selection
-- classes: ColumnTransformer, OneHotEncoder, StandardScaler, train_test_split, r2_score, max_error, mean_absolute_error, mean_squared_error
-- linear regression model
-- Vector regression model
-- Decision tree regression model
-- Random Forest regression model
+#### Modules: metrics, compose, preprocessing, model_selection
 
-- Pipeline to tie it all together
+#### Classes: ColumnTransformer, [OneHotEncoder](https://www.analyticsvidhya.com/blog/2020/03/one-hot-encoding-vs-label-encoding-using-scikit-learn/)[3], StandardScaler, train_test_split, r2_score, max_error, mean_absolute_error, mean_squared_error
+
+#### Multiple Linear Regression model
+
+- y = b0 + b1x1 + b2x2 + ... + bNxN
+- [source](https://en.wikipedia.org/wiki/Linear_regression#Simple_and_multiple_linear_regression)[4]
+- [source](https://www.simplilearn.com/what-is-backward-elimination-technique-in-machine-learning-article#:~:text=What%20is%20backward%20elimination%20in,is%20removed%20from%20the%20model.)[5]
+- [source](https://www.investopedia.com/terms/p/p-value.asp)[6]
+- [source](https://www.simplypsychology.org/p-value.html)[7]
+
+#### Support Vector Regression (SVR) model
+
+- [source](https://files.core.ac.uk/pdf/2612/81523322.pdf)[8]
+- [source](https://data-flair.training/blogs/svm-kernel-functions/)[9]
+
+#### Decision Tree Regression model
+
+- [source](https://www.section.io/engineering-education/entropy-information-gain-machine-learning/)[10]
+- [source](https://towardsdatascience.com/entropy-how-decision-trees-make-decisions-2946b9c18c8)[11]
+- [source](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)[12]
+
+#### Random Forest Regression model
+
+##### Step 1: Pick at random K data points from the Training set.
+
+##### Step 2: Build the Decision Tree associated to these K data points.
+
+##### Step 3: Choose the number Ntree of trees you want to build and repeat STEPS 1 & 2
+
+##### Step 4: For a new data point, make each one of your Ntree trees predict the value of Y for the data point in question, and assign the new data point the average across all of the predicted Y values.
+
+- [source](https://towardsdatascience.com/basic-ensemble-learning-random-forest-adaboost-gradient-boosting-step-by-step-explained-95d49d1e2725)[13]
+- [source](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)[14]
 
 ## Results
+
+TODO edit the documentation:
 
 The app is live at https://ds-example.herokuapp.com/
 It allows for online and batch processing as designed by the pycaret post:
 
-- Online: User inputs each feature manually for predicting a single insurance cost
-  ![online screenshot](./online.png)
-- Batch: It allows the user to upload a CSV file with the 6 features for predicting many instances at once.
-  - An [X_test.csv](./X_test.csv) is provided as a batch processing sample. Corresponding insurance prices are available at [y_test.csv](./y_test.csv)
-    ![batch screenshot](./batch.png)
-
-I am not adding any visualizations to this example, though st supports it. Couple good examples are [here](https://share.streamlit.io/tylerjrichards/book_reco/books.py) and [here](https://share.streamlit.io/streamlit/demo-uber-nyc-pickups/)
-
 ## Discussion
 
-Experimenting with various models implemented by different regression algorithms and the data was split 80/20 for testing, I found that Random Forest regression with specific number of trees provided one of the highest accuracies. I applied multiple way to evaluate the model performance such as r2_score, max_error, mean_absolute_error (MAE), and mean_squared_error (MSE). Across all these evaluations, the results for the random forest regression model were the best of all model
+Experimenting with various models implemented by different regression algorithms and the data was split 80/20 for testing, I found that Random Forest regression with specific number of trees provided one of the highest accuracies. I applied multiple way to [evaluate](https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics)[15] the model performance such as r2_score, max_error, mean_absolute_error (MAE), and mean_squared_error (MSE). Across all these evaluations, the results for the random forest regression model were the best of all model
 
 ### Multiple Linear Regression results
 
@@ -87,7 +104,7 @@ Experimenting with various models implemented by different regression algorithms
 
 ![Random Forest Regression results](./img/Random_forest_regression_results.png)
 
-Thus, I decided the deploy the pipelined Random Forest regression model.
+Thus, I decided to deploy the Random Forest regression model.
 
 Some of the benefits of Random Forest Regression that I've found underline the acceptable level of success for this dataset
 
