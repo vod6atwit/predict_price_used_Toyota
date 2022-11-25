@@ -1,6 +1,6 @@
 ## Introduction
 
-The objective of this project is to train, build, test and select the best regression model to predict the price to sell used Toyota cars, considering their year, transmission, mileage, fuel type, tax, mpg, and engine size. I am using the Heroku platform as a service (PaaS) for the automatic deployment of a machine-learning web app.
+The objective of this project is to train, build, test and select the best regression model to predict the price to sell used Toyota cars, considering their year, transmission, mileage, fuel type, tax, mpg, and engine size. I am using the streamlit share for the automatic deployment of a machine-learning web app.
 
 I wanted to ease the web app development and [Streamlit](https://www.streamlit.io/) made this possible [1]. It is an open-source library that focuses on data science and ML web app development.
 
@@ -79,10 +79,7 @@ I finally saved the model via joblib to be used for predictions by the web app.
 
 ## Results
 
-TODO edit the documentation:
-
-The app is live at https://ds-example.herokuapp.com/
-It allows for online and batch processing as designed by the pycaret post:
+The app is live at https://vod6atwit-predict-price-used-toyota-app-ocyc95.streamlit.app/
 
 ## Discussion
 
@@ -110,21 +107,11 @@ Some of the benefits of Random Forest Regression that I've found underline the a
 
 [Why Random Forest is My Favorite Machine Learning Model](https://towardsdatascience.com/why-random-forest-is-my-favorite-machine-learning-model-b97651fa3706)[16]
 
-TODO: edit this line
-
-One unexpected challenge was the free storage capacity offered by Heroku. I experimented with various versions of the libraries listed in `requirements.txt` to achieve a reasonable memory footprint. While I couldn't include the latest pycaret library due to its size, the current setup does include TensorFlow 2.3.1 (even though not utilized by this sample project) to illustrate how much can be done in Heroku's free tier:
-
-```
-Warning: Your slug size (326 MB) exceeds our soft limit (300 MB) which may affect boot time.
-```
-
 ## Summary
 
 This sample project deploys a supervised regression model to predict the price to sell used Toyota cars on 8 features. After experimenting with various feature engineering techniques, the deployed model's testing accuracy hovers around 96%.
 
-TODO: edit the link
-
-The web app is designed using Streamlit and is deployed using Heroku and Streamlit. The Heroku app is live at https://ds-example.herokuapp.com/.
+The web app is designed using Streamlit and is deployed using Streamlit. The app is live at https://vod6atwit-predict-price-used-toyota-app-ocyc95.streamlit.app/.
 
 More info about streamlit hosting is [here](https://docs.streamlit.io/en/stable/deploy_streamlit_app.html)[17].
 
@@ -164,4 +151,4 @@ More info about streamlit hosting is [here](https://docs.streamlit.io/en/stable/
 
 [17] [deploy_streamlit_app](https://docs.streamlit.io/en/stable/deploy_streamlit_app.html)
 
-[18] [GitHub Integration (Heroku GitHub Deploys)](https://devcenter.heroku.com/articles/github-integration)
+<!-- [18] [GitHub Integration (Heroku GitHub Deploys)](https://devcenter.heroku.com/articles/github-integration) -->
