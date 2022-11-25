@@ -16,11 +16,11 @@ The objective is to indicate the price to sell used Toyota cars.
 
 The dataset can found online at [kaggle](https://www.kaggle.com/datasets/aishwaryamuthukumar/cars-dataset-audi-bmw-ford-hyundai-skoda-vw)[2].
 
-#### Data overview:
+### Data overview after processing:
 
 ![data overview screenshot](./img/data_overview_01.png)
 
-#### Data info:
+### Data info after processing:
 
 ![data info screenshot](./img/data_overview_02.png)
 
@@ -108,7 +108,7 @@ Thus, I decided to deploy the Random Forest regression model.
 
 Some of the benefits of Random Forest Regression that I've found underline the acceptable level of success for this dataset
 
-[Why Random Forest is My Favorite Machine Learning Model](https://towardsdatascience.com/why-random-forest-is-my-favorite-machine-learning-model-b97651fa3706)
+[Why Random Forest is My Favorite Machine Learning Model](https://towardsdatascience.com/why-random-forest-is-my-favorite-machine-learning-model-b97651fa3706)[16]
 
 TODO: edit this line
 
@@ -126,7 +126,7 @@ TODO: edit the link
 
 The web app is designed using Streamlit and is deployed using Heroku and Streamlit. The Heroku app is live at https://ds-example.herokuapp.com/.
 
-More info about st hosting is [here](https://docs.streamlit.io/en/stable/deploy_streamlit_app.html)[17].
+More info about streamlit hosting is [here](https://docs.streamlit.io/en/stable/deploy_streamlit_app.html)[17].
 
 ## References
 
