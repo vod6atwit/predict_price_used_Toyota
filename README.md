@@ -34,35 +34,35 @@ I finally saved the model via joblib to be used for predictions by the web app.
 
 ### Tools:
 
-- NumPy, SciPy, Pandas, and Scikit-learn for data analysis and inference
+- NumPy, Pandas, and Scikit-learn for data analysis and inference
 - Streamlit (st) for web app design
 - GitHub and Heroku for web app deployment and hosting/version control
 - VS Code as IDE
 
-### Inference methods used with Scikit:
+### Inference methods used with Scikit-learn:
 
-#### Modules: metrics, compose, preprocessing, model_selection
+#### - Modules: metrics, compose, preprocessing, model_selection
 
-#### Classes: ColumnTransformer, [OneHotEncoder](https://www.analyticsvidhya.com/blog/2020/03/one-hot-encoding-vs-label-encoding-using-scikit-learn/)[3], StandardScaler, train_test_split, r2_score, max_error, mean_absolute_error, mean_squared_error
+#### - Classes: ColumnTransformer, [OneHotEncoder](https://www.analyticsvidhya.com/blog/2020/03/one-hot-encoding-vs-label-encoding-using-scikit-learn/)[3], StandardScaler, train_test_split, r2_score, max_error, mean_absolute_error, mean_squared_error
 
-#### Multiple Linear Regression model
+#### - Multiple Linear Regression model
 
 - y = b0 + b1x1 + b2x2 + ... + bNxN
-- [source](https://en.wikipedia.org/wiki/Linear_regression#Simple_and_multiple_linear_regression)[4]
-- [source](https://www.simplilearn.com/what-is-backward-elimination-technique-in-machine-learning-article#:~:text=What%20is%20backward%20elimination%20in,is%20removed%20from%20the%20model.)[5]
-- [source](https://www.investopedia.com/terms/p/p-value.asp)[6]
-- [source](https://www.simplypsychology.org/p-value.html)[7]
+- [Simple_and_multiple_linear_regression](https://en.wikipedia.org/wiki/Linear_regression#Simple_and_multiple_linear_regression)[4]
+- [backward-elimination](https://www.simplilearn.com/what-is-backward-elimination-technique-in-machine-learning-article#:~:text=What%20is%20backward%20elimination%20in,is%20removed%20from%20the%20model.)[5]
+- [p-value_01](https://www.investopedia.com/terms/p/p-value.asp)[6]
+- [p-value_02](https://www.simplypsychology.org/p-value.html)[7]
 
 #### Support Vector Regression (SVR) model
 
-- [source](https://files.core.ac.uk/pdf/2612/81523322.pdf)[8]
-- [source](https://data-flair.training/blogs/svm-kernel-functions/)[9]
+- [SVR](https://files.core.ac.uk/pdf/2612/81523322.pdf)[8]
+- [svm-kernel-functions](https://data-flair.training/blogs/svm-kernel-functions/)[9]
 
 #### Decision Tree Regression model
 
-- [source](https://www.section.io/engineering-education/entropy-information-gain-machine-learning/)[10]
-- [source](https://towardsdatascience.com/entropy-how-decision-trees-make-decisions-2946b9c18c8)[11]
-- [source](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)[12]
+- [entropy-information-gain-machine-learning](https://www.section.io/engineering-education/entropy-information-gain-machine-learning/)[10]
+- [entropy-how-decision-trees-make-decisions](https://towardsdatascience.com/entropy-how-decision-trees-make-decisions-2946b9c18c8)[11]
+- [sklearn.tree.DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)[12]
 
 #### Random Forest Regression model
 
@@ -74,8 +74,8 @@ I finally saved the model via joblib to be used for predictions by the web app.
 
 ##### Step 4: For a new data point, make each one of your Ntree trees predict the value of Y for the data point in question, and assign the new data point the average across all of the predicted Y values.
 
-- [source](https://towardsdatascience.com/basic-ensemble-learning-random-forest-adaboost-gradient-boosting-step-by-step-explained-95d49d1e2725)[13]
-- [source](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)[14]
+- [basic-ensemble-learning-random-forest](https://towardsdatascience.com/basic-ensemble-learning-random-forest-adaboost-gradient-boosting-step-by-step-explained-95d49d1e2725)[13]
+- [sklearn.ensemble.RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)[14]
 
 ## Results
 
