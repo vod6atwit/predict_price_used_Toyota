@@ -120,21 +120,48 @@ Warning: Your slug size (326 MB) exceeds our soft limit (300 MB) which may affec
 
 ## Summary
 
-This sample project deploys a supervised regression model to predict insurance costs based on 6 features. After experimenting with various feature engineering techniques, the deployed model's testing accuracy hovers around 73%.
+This sample project deploys a supervised regression model to predict the price to sell used Toyota cars on 8 features. After experimenting with various feature engineering techniques, the deployed model's testing accuracy hovers around 96%.
 
-The web app is designed using Streamlit, and can do online and batch processing, and is deployed using Heroku and Streamlit. The Heroku app is live at https://ds-example.herokuapp.com/.
+TODO: edit the link
 
-Streamlit is starting to offer free hosting as well. The same repo is also deployed at [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/memoatwit/dsexample/app.py)  
-More info about st hosting is [here](https://docs.streamlit.io/en/stable/deploy_streamlit_app.html).
+The web app is designed using Streamlit and is deployed using Heroku and Streamlit. The Heroku app is live at https://ds-example.herokuapp.com/.
+
+More info about st hosting is [here](https://docs.streamlit.io/en/stable/deploy_streamlit_app.html)[17].
 
 ## References
 
-[1] [GitHub Integration (Heroku GitHub Deploys)](https://devcenter.heroku.com/articles/github-integration)
+[1] [Streamlit](https://www.streamlit.io/)
 
-[2] [Streamlit](https://www.streamlit.io/)
+[2] [kaggle dataset](https://www.kaggle.com/datasets/aishwaryamuthukumar/cars-dataset-audi-bmw-ford-hyundai-skoda-vw)
 
-[3] [The pycaret post](https://towardsdatascience.com/build-and-deploy-machine-learning-web-app-using-pycaret-and-streamlit-28883a569104)
+[3] [OneHotEncoder](https://www.analyticsvidhya.com/blog/2020/03/one-hot-encoding-vs-label-encoding-using-scikit-learn/)
 
-[4] [Insurance dataset: git](https://github.com/stedy/Machine-Learning-with-R-datasets)
+[4] [Simple_and_multiple_linear_regression](https://en.wikipedia.org/wiki/Linear_regression#Simple_and_multiple_linear_regression)
 
-[5] [Insurance dataset: kaggle](https://www.kaggle.com/mirichoi0218/insurance)
+[5] [backward-elimination](https://www.simplilearn.com/what-is-backward-elimination-technique-in-machine-learning-article#:~:text=What%20is%20backward%20elimination%20in,is%20removed%20from%20the%20model.)
+
+[6] [p-value_01](https://www.investopedia.com/terms/p/p-value.asp)
+
+[7] [p-value_02](https://www.simplypsychology.org/p-value.html)
+
+[8] [SVR](https://files.core.ac.uk/pdf/2612/81523322.pdf)
+
+[9] [svm-kernel-functions](https://data-flair.training/blogs/svm-kernel-functions/)
+
+[10] [entropy-information-gain-machine-learning](https://www.section.io/engineering-education/entropy-information-gain-machine-learning/)
+
+[11] [entropy-how-decision-trees-make-decisions](https://towardsdatascience.com/entropy-how-decision-trees-make-decisions-2946b9c18c8)
+
+[12] [sklearn.tree.DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
+
+[13] [basic-ensemble-learning-random-forest](https://towardsdatascience.com/basic-ensemble-learning-random-forest-adaboost-gradient-boosting-step-by-step-explained-95d49d1e2725)
+
+[14] [sklearn.ensemble.RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
+
+[15] [evaluate](https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics)
+
+[16] [Why Random Forest is My Favorite Machine Learning Model](https://towardsdatascience.com/why-random-forest-is-my-favorite-machine-learning-model-b97651fa3706)
+
+[17] [deploy_streamlit_app](https://docs.streamlit.io/en/stable/deploy_streamlit_app.html)
+
+[18] [GitHub Integration (Heroku GitHub Deploys)](https://devcenter.heroku.com/articles/github-integration)
