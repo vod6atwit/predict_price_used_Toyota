@@ -145,7 +145,7 @@ More info about streamlit hosting is [here](https://docs.streamlit.io/en/stable/
 
 [14] [sklearn.ensemble.RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
 
-[15] [evaluate](https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics)
+[15] [model_evaluations](https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics)
 
 [16] [Why Random Forest is My Favorite Machine Learning Model](https://towardsdatascience.com/why-random-forest-is-my-favorite-machine-learning-model-b97651fa3706)
 

@@ -27,20 +27,20 @@ def predict(model, input_df):
 
   
 st.title('Used Toyota Price Prediction App')
-model = st.selectbox('Model', [' GT86', ' Corolla', ' RAV4', ' Yaris', ' Auris', ' Aygo', ' C-HR',
+model = st.selectbox('Model', sorted([' GT86', ' Corolla', ' RAV4', ' Yaris', ' Auris', ' Aygo', ' C-HR',
        ' Prius', ' Avensis', ' Verso', ' Hilux', ' PROACE VERSO',
        ' Land Cruiser', ' Supra', ' Camry', ' Verso-S', ' IQ',
-       ' Urban Cruiser'])
-year = st.selectbox('Year', [2016, 2017, 2015, 2020, 2013, 2019, 2018, 2014, 2012, 2005, 2003,
+       ' Urban Cruiser']))
+year = st.selectbox('Year', sorted([2016, 2017, 2015, 2020, 2013, 2019, 2018, 2014, 2012, 2005, 2003,
        2004, 2001, 2008, 2007, 2010, 2011, 2006, 2009, 2002, 1999, 2000,
-       1998])
+       1998]))
 transmission = st.selectbox('Transmission', ['Manual', 'Automatic', 'Semi-Auto', 'Other'])
 mileage = st.number_input('Mileage', min_value=2, max_value=174419, value=25000)
 fuelType = st.selectbox('FuelType', ['Petrol', 'Other', 'Hybrid', 'Diesel'])
 tax = st.number_input('Tax', min_value=0, max_value=565, value=95)
 mpg = st.number_input('MPG', min_value=2.8, max_value=235., value=63.)
-engineSize = st.selectbox('Engine Size', [2. , 1.8, 1.2, 1.6, 1.4, 2.5, 2.2, 1.5, 1. , 1.3, 0. , 2.4, 3. ,
-       2.8, 4.2, 4.5])
+engineSize = st.selectbox('Engine Size', sorted([2. , 1.8, 1.2, 1.6, 1.4, 2.5, 2.2, 1.5, 1. , 1.3, 0. , 2.4, 3. ,
+       2.8, 4.2, 4.5]))
 
 output=""
 
