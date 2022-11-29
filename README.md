@@ -81,6 +81,10 @@ I finally saved the model via joblib to be used for predictions by the web app.
 
 The app is live at https://vod6atwit-predict-price-used-toyota-app-ocyc95.streamlit.app/
 
+### deploying on streamlit share
+
+![deploying](./img/deploying_app.png)
+
 ## Discussion
 
 Experimenting with various models implemented by different regression algorithms and the data was split 80/20 for testing, I found that Random Forest regression with specific number of trees provided one of the highest accuracies. I applied multiple way to [evaluate](https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics)[15] the model performance such as r2_score, max_error, mean_absolute_error (MAE), and mean_squared_error (MSE). Across all these evaluations, the results for the random forest regression model were the best of all model
